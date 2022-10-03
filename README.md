@@ -7,11 +7,15 @@ A minél szélesebb használhatóság érdeklében leírjuk a Windows alapú (WS
 - Ubuntu 18.04
 - ROS Melodic
 
+Az első lépés során tehát vagy az `1/A.` vagy az `1/B.` opciót javasoljuk 
+
 ## `1/A.` WSL alapú telepítés
 Windows Subsystem for Linux
+- VS code szerkesztő: https://code.visualstudio.com/download
 
 ## `1/B.` Natív Ubuntu alapú telepítés
 Ubuntu 18.04
+- VS code szerkesztő: https://code.visualstudio.com/download
 
 ## `2.` ROS telepítése
 
@@ -22,7 +26,7 @@ A teljes telepítési leírás megtalálható itt: http://wiki.ros.org/melodic/I
 A szükésges csomagok így telepíthetőek:
 
 ```
-sudo apt-get -y install ros-melodic-ros-control ros-melodic-gazebo-ros-control ros-melodic-ros-controllers ros-melodic-navigation qt4-default ros-melodic-ackermann-msgs ros-melodic-serial ros-melodic-teb-local-planner* ros-melodic-tf-conversions zip unzip python-catkin-tools
+sudo apt-get -y install ros-melodic-ros-control ros-melodic-gazebo-ros-control ros-melodic-ros-controllers ros-melodic-navigation qt4-default ros-melodic-ackermann-msgs ros-melodic-serial ros-melodic-teb-local-planner* ros-melodic-tf-conversions zip unzip ros-melodic-jsk-rviz-plugins python-catkin-tools
 ```
 
 Készítsünk egy külön workspace-t ('sim_ws'), hogy később könnyen törölhessük, ha már nem kell.
@@ -58,10 +62,17 @@ Terminal2:
 ```
 roslaunch racecar_gazebo racecar.launch
 ```
+*Tipp:* `rosservice call /gazebo/reset_simulation "{}"` paranccsal alaphelyzetbe állítható a szimulátor, de a `megoldas1.launch`-ban lévő:
+``` xml
+<node pkg="rosservice" type="rosservice" name="rosservice" args="call /gazebo/reset_simulation"/>
+```
+ugyanezt teszi.
+
 Terminal3:
 ```
 roslaunch megoldas megoldas1.launch
 ```
+
 
 # Beküldés
 

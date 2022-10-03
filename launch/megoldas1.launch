@@ -1,3 +1,18 @@
 <launch>
-    <node type="rviz" name="rviz01" pkg="rviz" args="-d $(find megoldas)/rviz/megoldas1.rviz" />
+    <!-- 
+    rivz - robot vizualizacio
+    -->
+    <node pkg="rviz" type="rviz" name="rviz01" args="-d $(find megoldas)/rviz/megoldas1.rviz" />
+    <!--
+    PID szabalyzo https://hu.wikipedia.org/wiki/PID_szab%C3%A1lyoz%C3%B3
+    -->    
+    <node pkg="megoldas" type= "pid_error.py" name="pid_fal_kovetes" output="screen"/>
+    <!--
+    PID szabalyzo https://hu.wikipedia.org/wiki/PID_szab%C3%A1lyoz%C3%B3
+    --> 
+    <node pkg="megoldas" type= "control.py" name="szabalyzo"  output="screen"/>
+    <!--
+    szimulator alaphelyzetbe allitas
+    -->
+    <node pkg="rosservice" type="rosservice" name="rosservice" args="call /gazebo/reset_simulation"/>
 </launch>
