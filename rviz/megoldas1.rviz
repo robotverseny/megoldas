@@ -123,6 +123,25 @@ Visualization Manager:
       text size: 12
       top: 128
       width: 128
+    - Align Bottom: false
+      Background Alpha: 0.10000000149011612
+      Background Color: 0; 0; 0
+      Class: jsk_rviz_plugin/String
+      Enabled: true
+      Foreground Alpha: 0.800000011920929
+      Foreground Color: 92; 222; 179
+      Name: StringVersenyStatus
+      Overtake Color Properties: true
+      Overtake Position Properties: true
+      Topic: /race_info
+      Value: true
+      font: DejaVu Sans Mono
+      height: 64
+      left: 0
+      line width: 2
+      text size: 12
+      top: 192
+      width: 256
     - Class: rviz/Image
       Enabled: true
       Image Topic: /camera/zed/rgb/image_rect_color
@@ -135,6 +154,31 @@ Visualization Manager:
       Transport Hint: compressed
       Unreliable: false
       Value: true
+    - Buffer length: 100
+      Class: jsk_rviz_plugin/Plotter2D
+      Enabled: true
+      Name: Sebesseg
+      Show Value: true
+      Topic: /speed_measured
+      Value: true
+      auto color change: false
+      auto scale: true
+      background color: 0; 0; 0
+      backround alpha: 0
+      border: true
+      foreground alpha: 0.699999988079071
+      foreground color: 23; 226; 220
+      height: 128
+      left: 10
+      linewidth: 1
+      max color: 255; 0; 0
+      max value: 1
+      min value: -1
+      show caption: true
+      text size: 12
+      top: 300
+      update interval: 0.03999999910593033
+      width: 128
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -201,5 +245,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1063
-  X: 879
-  Y: 90
+  X: 895
+  Y: 152
