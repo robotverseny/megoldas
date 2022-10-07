@@ -54,6 +54,17 @@ Később a `bashrc`-ből törölhető ez a sor, nyissuk meg vs code-ból: `code 
 
 # Fejlesztés
 
+**Fontos**, hogy a középiskola neve és azonosítója ki legyen töltve, így a `/kozepiskola` topic-ban a tényleges középisola név és azonosító szerepeljen. Ezt a legkönnyebben a `pid_error.py` fájl elején lévő változók átírásával lehet elérni (ékezetek nélkül).
+
+Tehát a következő állapot alaphelyzet, hibás beküldést jelent:
+
+``` bash
+$ rostopic echo -n1 /kozepiskola
+data: "Ismeretlen kozepiskola(A00)"
+```
+
+Link: https://github.com/robotverseny/megoldas/blob/main/src/pid_error.py#L15-L16
+
 Terminal1:
 ```
 roscore
