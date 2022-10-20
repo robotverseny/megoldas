@@ -37,8 +37,8 @@ mkdir -p sim_ws/src
 cd ~/sim_ws/src
 git clone https://github.com/robotverseny/racecar_gazebo
 git clone https://github.com/robotverseny/megoldas
-catkin init
 cd ~/sim_ws
+catkin init
 catkin build
 ```
 
