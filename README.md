@@ -39,10 +39,18 @@ git clone https://github.com/robotverseny/racecar_gazebo
 git clone https://github.com/robotverseny/megoldas
 cd ~/sim_ws
 catkin init
-catkin build
+catkin 
 ```
 
-Hogy ne kelljen minden terminalban megadnunk a workspace-t, tegyük a bashrc-be. Ha ezt nem szerenénk, elég mindig kiadni a `source ~/sim_ws/devel/setup.bash` parancsot.
+Adjuk meg bashrc-ben a szimulátorhoz szükséges modellek elérési útvonalát.
+
+```
+echo "export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:~/src/racecar_gazebo/f1tenth/virtual/dependencies/racecar_gazebo/models" >> ~/.bashrc
+source ~/.bashrc
+
+```
+
+Hogy ne kelljen minden terminalban megadnunk a workspace-t, tegyük azt is a bashrc-be. Ha ezt nem szerenénk, elég mindig kiadni a `source ~/sim_ws/devel/setup.bash` parancsot.
 
 ```
 echo "source ~/sim_ws/devel/setup.bash" >> ~/.bashrc
