@@ -45,7 +45,7 @@ catkin
 Adjuk meg bashrc-ben a szimulátorhoz szükséges modellek elérési útvonalát.
 
 ```
-echo "export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:~/src/racecar_gazebo/f1tenth/virtual/dependencies/racecar_gazebo/models" >> ~/.bashrc
+echo "export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:~/sim_ws/src/racecar_gazebo/f1tenth/virtual/dependencies/racecar_gazebo/models" >> ~/.bashrc
 source ~/.bashrc
 
 ```
