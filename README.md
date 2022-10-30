@@ -18,7 +18,8 @@ A Windows Subsystem for Linux egy kompatibilitási réteg Linux-alapú elemek na
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 ```
 - Indítsátok újra a számítógépet az ```Y``` betű beírásával.
-- Nyissátok meg a Microsoft Store-t, és keressetek rá az Ubuntu 18.04-re. Telepítsétek.
+- Nyissátok meg a Microsoft Store-t, és keressetek rá a Windows Subsystem for Linux Preview-ra. Telepítsétek.
+- Szintén a Microsoft Store-ban keressetek rá az Ubuntu 18.04-re, és telepítsétek.
 - A könnyebb kezelhetőség érdekében érdemes telepíteni a Windows Terminal programot is. Szintén a Microsoft Store-ban keressetek rá a Windows Terminal-ra, és telepítsétek.
 - Indítsátok el a Windows Terminal programot, és a Ctrl+, (Control és vessző) billentyűkombinációval nyissátok meg a beállításokat. A Default Profile beállítási sor legördülő listájából válasszátok az Ubuntu 18.04-et. 
 - Indítsátok újra a Windows Terminal-t. Az első induláskor adjatok meg tetszőleges felhasználónevet és jelszót. 
