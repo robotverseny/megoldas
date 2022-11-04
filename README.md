@@ -77,7 +77,7 @@ További információk a telepítéssel kapcsolatban elérhetőek itt: http://wi
 A szükésges csomagok így telepíthetőek:
 
 ```
-sudo apt-get -y install ros-melodic-ros-control ros-melodic-gazebo-ros-control ros-melodic-ros-controllers ros-melodic-navigation qt4-default ros-melodic-ackermann-msgs ros-melodic-serial ros-melodic-teb-local-planner* ros-melodic-tf-conversions zip unzip ros-melodic-jsk-rviz-plugins python-catkin-tools
+sudo apt-get -y install ros-melodic-ros-control ros-melodic-gazebo-ros-control ros-melodic-ros-controllers ros-melodic-navigation qt4-default ros-melodic-ackermann-msgs ros-melodic-serial ros-melodic-teb-local-planner* ros-melodic-tf-conversions zip unzip ros-melodic-jsk-rviz-plugins python3-catkin-tools
 ```
 
 Készítsünk egy külön workspace-t ('sim_ws'), hogy később könnyen törölhessük, ha már nem kell.
@@ -89,7 +89,6 @@ cd ~/sim_ws/src
 git clone https://github.com/robotverseny/racecar_gazebo
 git clone https://github.com/robotverseny/megoldas
 cd ~/sim_ws
-catkin init
 catkin build
 ```
 
