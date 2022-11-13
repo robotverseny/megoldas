@@ -26,6 +26,10 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 - A megoldás kidolgozásához a VS Code szerkesztőt javasoljuk. Telepítsétek innen: https://code.visualstudio.com/download
 - Végül telepítsétek a VS Code Remote Development kiegészítőjét, hogy WSL használatával is elérhető legyen: https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack
 
+A WSL telepítését bemutató videó itt érhető el: https://youtu.be/S1U-f5pzO7s
+
+A VS Code telepítéséhez itt találtok útmutatót: https://youtu.be/fAkpQ4Q3S2g
+
 ## `1/B.` Natív Ubuntu alapú telepítés
 Ubuntu 18.04
 - VS code szerkesztő: https://code.visualstudio.com/download
@@ -68,6 +72,8 @@ A telepítést követően tegyük a basrc-be az ROS környezeti változóját:
 echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 ```
+
+Az ROS Melodic telepítését bemutató videó itt tekinthető meg: https://youtu.be/e-VjpK5mYOI
 ### Megjegyzés
 
 További információk a telepítéssel kapcsolatban elérhetőek itt: http://wiki.ros.org/melodic/Installation/Ubuntu
@@ -106,22 +112,23 @@ Hogy ne kelljen minden terminalban megadnunk a workspace-t, tegyük azt is a bas
 echo "source ~/sim_ws/devel/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 ```
-Később a `bashrc`-ből törölhető ez a sor, nyissuk meg vs code-ból: `code ~/.bashrc`.
+A csomagok telepítését és a workspace létrehozását bemutató videó itt érhető el: https://youtu.be/cXABl5jbmVc
 
-### TODO
+Később, ha a verseny után már nem szükséges, a `bashrc`-ből törölhető ez a sor, nyissuk meg vs code-ból: `code ~/.bashrc`, majd a fájl utolsó soraiból töröljük a korábban hozzáadottat. 
+
+
+
+
 
 # Fejlesztés
 
 **Fontos**, hogy a középiskola neve és azonosítója ki legyen töltve, így a `/kozepiskola` topic-ban a tényleges középisola név és azonosító szerepeljen. Ezt a legkönnyebben a `pid_error.py` fájl elején lévő változók átírásával lehet elérni (ékezetek nélkül).
 
-Tehát a következő állapot alaphelyzet, hibás beküldést jelent:
+A középiskola nevének és kódjának beállítását szemléltető videó: https://youtu.be/ATY1mgrHBt4
 
-``` bash
-$ rostopic echo -n1 /kozepiskola
-data: "Ismeretlen kozepiskola(A00)"
-```
+A fájlt a fenti videóban bemutatott módon érhetitek el a telepített csomagban. Ha külön is szeretnétek megtekinteni, a módosítandó fájlra mutató link: https://github.com/robotverseny/megoldas/blob/main/src/pid_error.py#L15-L16
 
-Link: https://github.com/robotverseny/megoldas/blob/main/src/pid_error.py#L15-L16
+A szimulátor és a megoldás futtatásához a következő lépéseket tegyétek:
 
 Terminal1:
 ```
@@ -142,11 +149,27 @@ Terminal3:
 roslaunch megoldas megoldas1.launch
 ```
 
+Ellenőrizzétek, hogy sikeres volt-e a középiskolátok és a csapatotok kódjának beállítása. Írjátok be egy újabb terminálba a következőt: 
+
+``` bash
+$ rostopic echo -n1 /kozepiskola
+```
+
+A következő állapot alaphelyzet, hibás beküldést jelent. Itt az általatok megadott névnek és kódnak kell megjelennie:
+
+``` bash
+$ rostopic echo -n1 /kozepiskola
+data: "Ismeretlen kozepiskola(A00)"
+```
+
+A munkamenetet ismertető videó itt érhető el: https://youtu.be/IwI6COAgnTg
 
 # Beküldés
+
+Az alábbi módon csomagoljátok a megoldást .zip mappába, majd töltsétek fel a verseny honlapjára.
 
 ```
 cd sim_ws/src
 zip -r megoldas.zip megoldas
 ```
-### TODO
+
