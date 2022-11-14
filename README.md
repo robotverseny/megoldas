@@ -170,6 +170,8 @@ Az alábbi módon csomagoljátok a megoldást .zip mappába, majd töltsétek fe
 
 ```
 cd sim_ws/src
-zip -r megoldas.zip megoldas
+zip -r csapatnev_EEHHNN.zip megoldas
 ```
+*(értelemszerűen a `csapatnev` helyére a csapatnév ékezetek nélkül, alulvonásokkal, az `EEHHNN` helyére pedig a dátum kerüljön)*
 
+Link a feltöltéshez: https://felveteli.sze.hu/robotverseny-feladat-feltoltese
