@@ -1,3 +1,22 @@
+---
+layout: default
+title: Megoldás
+has_children: false
+---
+
+{: .no_toc }
+
+<details open markdown="block">
+  <summary>
+    Tartalom
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
+---
+
 # Megoldás
 🤖 Autonóm robot verseny megoldás template
 
@@ -26,9 +45,17 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 - A megoldás kidolgozásához a VS Code szerkesztőt javasoljuk. Telepítsétek innen: https://code.visualstudio.com/download
 - Végül telepítsétek a VS Code Remote Development kiegészítőjét, hogy WSL használatával is elérhető legyen: https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack
 
-A WSL telepítését bemutató videó itt érhető el: https://youtu.be/S1U-f5pzO7s
+A WSL telepítését bemutató [videó itt érhető el](https://youtu.be/S1U-f5pzO7s)
 
-A VS Code telepítéséhez itt találtok útmutatót: https://youtu.be/fAkpQ4Q3S2g
+<iframe width="560" height="315" src="https://www.youtube.com/embed/S1U-f5pzO7s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+A VS Code telepítéséhez [itt találtok video útmutatót](https://youtu.be/fAkpQ4Q3S2g)
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fAkpQ4Q3S2g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 ## `1/B.` Natív Ubuntu alapú telepítés
 Ubuntu 18.04
@@ -73,7 +100,11 @@ echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 ```
 
-Az ROS Melodic telepítését bemutató videó itt tekinthető meg: https://youtu.be/e-VjpK5mYOI
+Az ROS Melodic telepítését bemutató [videó itt tekinthető meg](https://youtu.be/e-VjpK5mYOI)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/e-VjpK5mYOI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
 ### Megjegyzés
 
 További információk a telepítéssel kapcsolatban elérhetőek itt: http://wiki.ros.org/melodic/Installation/Ubuntu
@@ -112,11 +143,13 @@ Hogy ne kelljen minden terminalban megadnunk a workspace-t, tegyük azt is a bas
 echo "source ~/sim_ws/devel/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 ```
-A csomagok telepítését és a workspace létrehozását bemutató videó itt érhető el: https://youtu.be/cXABl5jbmVc
+A csomagok telepítését és a workspace létrehozását bemutató [videó itt érhető el](https://youtu.be/cXABl5jbmVc)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cXABl5jbmVc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
 
 Később, ha a verseny után már nem szükséges, a `bashrc`-ből törölhető ez a sor, nyissuk meg vs code-ból: `code ~/.bashrc`, majd a fájl utolsó soraiból töröljük a korábban hozzáadottat. 
-
-
 
 
 
@@ -124,7 +157,10 @@ Később, ha a verseny után már nem szükséges, a `bashrc`-ből törölhető 
 
 **Fontos**, hogy a középiskola neve és azonosítója ki legyen töltve, így a `/kozepiskola` topic-ban a tényleges középisola név és azonosító szerepeljen. Ezt a legkönnyebben a `pid_error.py` fájl elején lévő változók átírásával lehet elérni (ékezetek nélkül).
 
-A középiskola nevének és kódjának beállítását szemléltető videó: https://youtu.be/ATY1mgrHBt4
+A középiskola nevének és kódjának beállítását [szemléltető videó](https://youtu.be/ATY1mgrHBt4)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ATY1mgrHBt4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 A fájlt a fenti videóban bemutatott módon érhetitek el a telepített csomagban. Ha külön is szeretnétek megtekinteni, a módosítandó fájlra mutató link: https://github.com/robotverseny/megoldas/blob/main/src/pid_error.py#L15-L16
 
@@ -162,7 +198,10 @@ $ rostopic echo -n1 /kozepiskola
 data: "Ismeretlen kozepiskola(A00)"
 ```
 
-A munkamenetet ismertető videó itt érhető el: https://youtu.be/IwI6COAgnTg
+A munkamenetet ismertető [videó itt érhető el](https://youtu.be/IwI6COAgnTg)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IwI6COAgnTg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 # Beküldés
 
